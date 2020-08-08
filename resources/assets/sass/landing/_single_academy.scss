@@ -1,0 +1,297 @@
+.aca-individual-main{
+    position: absolute;
+    right: 0;
+    
+    @include mediaMd {
+        width: 100%;
+        height: calc(100% - 5rem);
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .bg-mid-color{
+        @include mediaMd {
+            height: 60vh;
+        }
+
+        @include mediaXSm {
+            height: 40vh;
+        }
+    }
+
+    .ind-aca-slider{
+        width: 70%;
+        // height: 55%;
+        flex-flow: column;
+        align-items: flex-start;
+        padding: 1rem;
+
+        .corner-link{
+            display: flex;
+            margin-bottom: 3%;
+        }
+
+        @include mediaMd {
+            display: none;
+        }
+
+    }
+
+    .center-container {
+        @include mediaMd {
+            height: calc(100%);
+        }
+    }
+
+    .swiper-custom-btn-left, .swiper-custom-btn-right{
+        position: absolute;
+        top: 45%;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @include mediaMd {
+            display: none;
+        }
+
+        &:hover{
+            svg{
+                g{
+                    fill: $color-accent-1;
+                }
+            }
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .swiper-custom-btn-left{
+        left: 10%;
+    }
+
+
+    .swiper-custom-btn-right{
+        right: 10%;
+    }
+
+    .mobile-card-container {
+
+        @include mediaMd {
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 10%;
+
+            .card-half {
+
+                .card-overlay {
+                    position: relative;
+
+                    .title-position {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .card-title{
+                            color: #f3f3f3;
+                            width: 80%;
+                            text-align: center;
+                            line-height: 51px;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+    
+                .card-description {
+                    position: relative;
+                    align-items: center;
+                    padding: 2.3rem;
+                    display: flex;
+                    justify-content: center;
+
+                    .card-title-container {
+                        display: none;
+                    }
+
+                    .card-link-container {
+                        width: max-content;
+                        height: min-content;
+                        margin-bottom: 1rem;
+                        position: unset;
+                        justify-content: center;
+
+                        .show-link {
+                            padding: 0.85rem 0.3rem;
+                        }
+
+                        
+                    }
+                }
+            }
+
+            .sm-txt-bold {
+                font-size: 1.6rem;
+            }
+        }
+
+        @include mediaSm {
+            .sm-txt-bold {
+                font-size: 1.4rem;
+            }
+
+            .card-half {
+
+                .card-overlay {
+
+                    .title-position {
+
+                        .card-title {
+                            font-size: 2rem;
+                            line-height: 35px;
+                        }
+                    }
+                }
+
+                .card-description {
+                    padding: 1.5rem;
+                }
+            }
+        }
+
+        @include mediaXSm {
+            .sm-txt-bold {
+                font-size: 1.2rem;
+            }
+
+            .card-half {
+
+                .card-overlay {
+
+                    .title-position {
+
+                        .card-title {
+                            font-size: 1.5rem;
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                .card-description {
+                    padding: 1.2rem;
+                }
+            }
+        }
+
+        .card-half {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .responsive-data-container {
+        width: 80%;
+        height: 100%;
+        margin-top: 10%;
+        display: none;
+
+        @include mediaMd {
+            display: block;
+        }
+
+        .title-stroke {
+            position: relative;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15%;
+
+            @include mediaSm {
+                font-size: 2rem;
+            }
+
+            @include mediaXSm {
+                font-size: 1.5rem;
+            }
+        }
+
+        .corner-link {
+            display: flex;
+
+            @include mediaMd {
+                svg {
+                    width: .6rem;
+                }
+            }
+
+            @include mediaSm {
+                svg {
+                    width: .4rem;
+                }
+            }
+            
+            @include mediaXSm {
+                svg {
+                    width: .35rem;
+                }
+            }
+
+            .back-link {
+                font-size: 1.3rem;
+
+                @include mediaSm {
+                    font-size: .85rem;
+                }
+
+                @include mediaXSm {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+
+    @include mediaXL {
+        .ind-aca-slider {   
+            min-height: 18rem;
+            height: 50%;
+            max-height: 24rem;
+        }
+
+        .card-half .card-description .card-title-container .card-title {
+            font-size: 1.2rem;
+        }
+
+        .card-half .card-description {
+            padding: 1rem;
+        }
+    }
+
+    @include mediaLg {
+
+        .card-half .card-description .card-title-container .card-title {
+            font-size: 1rem;
+            line-height: 25px;
+        }
+
+        .card-half .card-description .card-link-container {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+
+    @include mediaMd {
+        width: 100%;
+    }
+
+    .scroll-section{
+        display: none;
+
+        @include mediaMd{
+            display: block;
+        }
+    }
+}

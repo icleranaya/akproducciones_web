@@ -1,0 +1,889 @@
+//============================================================//
+//===================== General Layouts =====================//
+
+.layout {
+    position: relative;
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        .banner{
+            background: $color-fill-1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 45vh;
+            min-height: 320px;
+            margin-top: 20vh;
+            overflow: hidden;
+            
+            @include mediaMd{
+                height: 30vh;
+                margin-top: 25vh;
+                min-height: 200px;
+                overflow: visible;
+            }
+        }
+
+        .banner-image {
+            width: 100%;
+            height: auto;
+
+            @include mediaMd{
+                height: 100%;
+            }
+        }
+
+        .banner-items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #f3f3f3;
+            background: linear-gradient(to bottom,rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 65%);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem 3rem;
+            font-size: 16px;
+
+            @include mediaMd{
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .corner-link {
+                display: flex;
+
+                @include mediaMd{
+                    display: none;
+                }
+            }
+        }
+
+        .corner {
+            position: relative;
+        }
+
+        .title {
+            h1{
+                margin: 0;
+                line-height: 65px;
+                @include mediaMd {
+                    font-size: 1.3rem;
+                    line-height: 24px;
+                }
+            }
+
+            @include mediaSm{
+                font-size: 1.3rem;
+            }
+        }
+
+        .content{
+            color: $color-fill-1;
+            width: 80%;
+            padding: 0 3rem;
+
+            @include mediaMd{
+                text-align: center;
+            }
+
+            h4 {
+                margin: 3rem 0 1rem 0;
+
+                @include mediaMd{
+                    font-size: 1.3rem;
+                    margin: 3rem 0 2rem 0;
+                }
+            }
+            
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .include-services{
+                li, p, div{
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                    line-height: 18px;
+                }
+            }
+
+            #paraph {
+                margin-top: 2rem;
+                width: 100%;
+
+                p {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            padding: 0 3rem;
+            
+            @include mediaMd{
+                padding: 0;
+            }
+
+            @include mediaLg{
+                display: none;
+            }
+
+            .box {
+                width: 30%;
+                min-width: 240px;
+                min-height: 240px;
+                height: 55vh;
+
+                @include mediaLg{
+                    min-width: unset;
+                    min-height: unset;
+                    height: 45vh;
+                }
+            }
+        }
+    } 
+
+        .table-container {
+            width: 80%;
+            padding: 0 3rem;
+            display: flex;
+            flex-flow: column nowrap;
+
+            @include mediaMd{
+                margin-bottom: 10%;
+                padding: 0;
+            }
+
+            .table-header {
+                color: $color-fill-1;
+                margin-bottom: 1em;
+
+                @include mediaMd{
+                    text-align: center;
+                }
+            }
+
+            .test-box {
+                width: 100%;
+                height: 500px;
+                background: $color-fill-1;
+                align-self: center;
+
+                @include mediaMd{
+                    display: none;
+                }
+            }
+    
+            .button-left {
+                margin-top: 4rem;
+                margin-right: auto;
+                width: 200px;
+
+                @include mediaMd{
+                    margin-left: auto;
+                }
+            }
+
+            .button-right {
+                margin-top: 4rem;
+                margin-left: auto;
+                width: 200px;
+
+                @include mediaMd{
+                    margin-right: auto;
+                }
+            }
+        }
+
+    .footer {
+        width: 100%;
+        height: 100px;
+    }
+
+    .link{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 2rem 3rem;
+    }
+
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    
+    .slider-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+        width: 90%;
+
+        .corner-link {
+            align-self: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .items-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+
+            .item {
+                width: 30%;
+                min-width: 240px;
+                min-height: 240px;
+                height: 55vh;
+                margin-right: 3rem;
+
+                &:last-child {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .icon {
+        margin-bottom: 7rem;
+    }
+}
+
+.slider-up {
+    margin-bottom: 1rem;
+}
+
+.slider-container-up {
+    margin-bottom: 5rem;
+}
+
+.layout-center {
+    width: 100%;
+    position: relative;
+
+    @include mediaMd{
+        margin-right: auto;
+
+        &:nth-child(3){
+            background: $color-main-1;
+            padding-top: 15%;
+        }
+    }
+
+    .logo-container {
+        width: 120px;
+        height:  20%;
+        background: white;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        left: 5%;
+
+        .logo {
+            width: 60%;
+            margin-bottom: 1rem;
+        }
+    }
+
+
+    .center-container {
+        position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+
+    .center-container-row {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        @include mediaMd{
+            height: auto;
+        }    
+    }
+
+      //------ Layout About - plane download
+    .center-start-container { 
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        @include mediaMd{
+            margin-top: 1.5rem;
+            align-items: center;
+            background: $color-main-1;
+        }  
+    }
+
+
+    .big-box {
+        width: 60%;
+        height: 60vh;
+        background: $color-fill-1;
+        margin-bottom: 12rem;
+        align-self: flex-end;
+        overflow: hidden;
+
+        @include mediaMd{
+            width: 100%;
+            height: 50vh;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        @include mediaSm{
+            height: 35vh;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .half-content {
+        width: 40%;
+        padding: 5rem 3rem 7rem 3rem;
+
+        @include mediaMd{
+            width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2{
+            @include mediaMd{
+                color: $color-fill-1;
+            }
+        }
+
+        p{
+            color: $white;
+            font-weight: 500;
+            line-height: 25px;
+            font-size: 0.75rem;
+
+            @include mediaMd{
+                font-size: 1rem;
+                color: $color-fill-1;
+            }
+        }
+    }
+}
+
+.default-image {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+
+    @include mediaMd{
+        text-align: start;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        align-items: center;
+    }
+
+    @include mediaMd{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .profile-photo-container {
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+        background: $color-fill-1;
+        margin-bottom: 1rem;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .profile-info {
+        width: 100%;
+
+        @include mediaMd{
+            text-align: center;
+        }
+    }
+
+    .name {
+        font-size: 1.35rem;
+        margin: 0;
+
+        @include mediaMd{
+            font-size: 1.5rem;
+        }
+    }
+
+    .employment{
+        font-size: 0.75rem;
+
+        @include mediaMd{
+            font-size: 1rem;
+        }
+    }
+
+    .profile-about, .name, .employment {
+        color: white;
+    }
+
+    p{
+        color: $white;
+        font-weight: 500;
+        line-height: 20px;
+        font-size: 0.75rem;
+
+        @include mediaMd{
+            font-size: 1rem;
+        }
+    }
+}
+
+//=====================  Unique Layouts ====================//
+//=========================================================//
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-right: auto;
+    margin-left: 4.5rem;
+}
+
+.profile-photo {
+    width: 30rem;
+    height: 30rem;
+    background: $color-fill-1;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include mediaMd{
+        justify-content: center;
+    }
+
+    img{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.profile-description {
+    width: 25rem;
+    margin-left: 2rem;
+    margin-bottom: 11rem;
+
+    .des-margin {
+        margin: 0;
+    }
+
+    .head-margin {
+        margin: 0;
+    }
+
+    p{
+        color: $white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 25px;
+    }
+}
+
+.container-info {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaMd{
+        flex-flow: column;
+        position: relative;
+        margin-top: 20%;
+    }
+
+    @include mediaSm{
+        margin-top: 30%;
+    }
+
+    @include mediaXSm {
+        margin-top: 50%;
+    }
+
+    .image-container {
+        background: $color-fill-1;
+        width:  50%;
+        height: 45vh;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-contac {
+        position: relative;
+        width: 50%;
+        margin-top: 0.5rem;
+        
+        .header {
+            margin: 0;
+        }
+    }
+    
+    //---- contact layout
+    .telf, .dir {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;   
+    }
+    
+    .telf {
+        margin-bottom: 1.5rem;
+        
+        .title {
+            margin: 0; 
+            margin-top: 1rem;
+        }
+        
+        .sub-title {
+            margin: .3rem 0;
+        }
+    }
+    
+    .dir {
+        color: $color-accent-2;
+        
+        P{
+            font-weight: 500;
+            line-height: 18px;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .email {
+            color: #4A4A4A;
+            margin-bottom: 2rem;
+            line-height: 25px !important;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color: $color-main-2;
+            }
+        }
+    }
+    
+    .btn-container {
+        width: 130px;
+        margin-bottom: .5rem;
+    }
+    // ------------
+    
+    //---- sign_up layout
+    .info {
+        position: relative;
+        width: 50%;
+        margin-bottom: 5rem;
+
+        @include mediaMd{
+            width: 100%;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+        
+        .header {
+            margin: 0;
+            margin-left: 1.5rem;
+
+            @include mediaMd{
+                margin-left: 0;
+            }
+        }
+    }
+
+    .list {
+
+        .link {
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $color-main-1;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-bottom: 3rem;
+            
+            @include mediaMd{
+                text-align: start;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 1.5rem;
+                margin-right: 0;
+
+                @include mediaMd{
+                    margin: 1.5rem 0;
+                }
+
+                span {
+                    border: solid 2px white;
+                    border-radius: 50px;
+                    padding: .8rem;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                p {
+                    margin: 0 .5rem;
+
+
+                    @include mediaMd{
+                        font-size: 1rem;
+                    }
+
+                    a{
+                        @include mediaMd{
+                            font-size: 1rem;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+
+    .form-link {
+        display: flex;
+        margin-left: 1.5rem;
+
+        @include mediaMd{
+            display: none;
+        } 
+    }
+
+    .sub-header {
+        margin: 1.5rem 0 1.5rem 2.5rem;
+
+        @include mediaMd{
+            margin: 1.5rem auto;
+        }
+    }
+
+    .info-box {
+        width: 30%;
+        height: 50%;
+        background: $color-accent-2;
+        border: solid 2px white;
+        margin-top: 10rem;
+        position: relative;
+
+        @include mediaMd{
+            width: 100%;
+            height: auto;
+            margin-top: 5%;
+        }
+
+        #go-back{
+            display: flex;
+            position: absolute;
+            top: -20%;
+            right: 0;
+            margin: 0;
+
+            @include mediaMd{
+                display: none;
+            }
+
+            svg{
+                margin-right: 0.5rem;
+            }
+
+            .show-link{
+                margin: 0;
+                padding: 0.5rem;
+                padding-left: 0;
+                padding-right: 0;
+                letter-spacing: normal;
+            }
+        }
+
+        .box-head {
+            height: 20%;
+            width: 100%;
+            background: #7F0015;
+            border-bottom: solid 2px white;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        .box-body {
+            width: 100%;
+            height: 80%;
+            padding: 1.5rem;
+
+            @include mediaMd{
+                padding: 3rem;
+            }
+
+            .box-content {
+                p {
+                    margin: 0;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+
+                    @include mediaMd{
+                        font-size: 1rem;
+                    }
+                }
+
+                ul {
+                    margin-top: 1.5rem;
+
+                    li {
+                        color: white;
+                        margin-bottom: 1rem;
+
+                        p {
+                            margin: 0;
+
+                            @include mediaMd{
+                                font-size: 1.2rem;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+      //-----------------
+}
+
+.link-container-1 {
+    display: inline-block;
+    margin: 0 .3rem;
+    margin-top: .11rem;
+
+    .show-link{
+        padding: 0.4rem 0 0.5rem 0;
+        animation: tic-tac 0.85s infinite alternate;
+
+        &:after{
+            background: $color-main-2;
+        }
+    }
+}
+
+ //------ Layout About - plane download
+.plane-container {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-left: 5%;
+    margin-bottom: 8rem;
+
+    @include mediaMd{
+        width: 80%;
+        margin-left: 0;
+        align-items: center;
+        padding: 2rem 0 7rem;
+        margin-bottom: 0;
+    }
+
+    @include mediaXSm{
+        padding: 5rem 0 8rem;
+    }
+
+    span{
+        @include mediaMd{
+            margin-top: 20%;
+        }   
+    }
+
+    p{
+        @include mediaMd{
+            text-align: center;
+        }   
+    }
+ }
+
+.plane {
+    width: 100%;
+    height: 50%; 
+    background: #f3f3f3;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include mediaMd{
+        height: 80%;
+        margin: 2rem 0;
+        overflow: visible;
+    }
+
+    .plane-img{
+        width: 100%;
+
+        @include mediaMd{
+            height: 100%;
+        }
+    }
+}
+
+.btn-download-container {
+    margin-top: 1rem;
+    width: 150px;
+}

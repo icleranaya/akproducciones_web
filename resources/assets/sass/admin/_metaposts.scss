@@ -1,0 +1,256 @@
+.inside {
+
+    .tab-table {
+        .tab-links{
+            width: 20%;
+
+            .tab-link {
+                height: auto;
+                margin-bottom: 0!important;
+            }
+        }
+
+        .tab-content {
+            width: 80%;
+
+            .group {
+                width: 100%;
+
+                &.ak-table {
+                    width: 100%;
+                    height: 100%;
+                    
+                    table {
+                        width: 100%;
+                        height: 100%;
+                        table-layout: fixed;
+                        width: 100%;
+                        display: flex;
+        
+                        thead, tbody{
+                            width: 100%;
+        
+                            tr{
+                                width: 100%;
+                                height: 25%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                
+                                th, td {
+                                    width: 20%;
+                                    text-align: center;
+                                    text-transform: capitalize;
+                                }
+
+                                td {
+                                    padding: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .tbl-header{
+                        height: 20%;
+                        background-color: $color-bg;
+        
+                        table{
+                            padding: 1rem;
+                            align-items: center;
+                        }
+                    }
+
+                    .tbl-inputs {
+                        table{
+                            padding: 1rem;
+                            align-items: center;
+                        }
+                    }
+        
+                    .tbl-content{
+                        overflow-x:auto;
+                        margin-top: 0px;
+                    }
+
+                    .content-group {
+                        display: grid;
+                        justify-items: center;
+                        grid-template-columns: 50% 50%;
+                        
+                        .section {
+                            width: 90%;
+                            margin-top: 2rem;
+
+                            .input-group {
+                                display: flex;
+                                flex-flow: row nowrap;
+                                
+                                .input-container {
+                                    flex: 1 1 100%;
+                                    input {
+                                        margin: 0;
+                                        font-weight: 400;
+                                        color: $color-accent-3;
+                                        box-shadow: none !important;
+                                        border-bottom: 1px solid rgba(26, 26, 26, 0.5);
+
+                                        &:not(:placeholder-shown) + span{
+                                            top: 15px;
+                                            color: $color-accent-3;
+                                            transform: translateY(-26px) scale(.75);
+                                        }
+
+                                        &:focus{
+                                            color: $color-main-1;
+                                            background: none;
+                                            outline: none;
+                                
+                                            + span{
+                                                color: $color-main-1;
+                                                transform: translateY(-26px) scale(.75);
+                                
+                                                + .border{
+                                                    transform: scaleX(1);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .label{
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 0;
+                                        font-size: 16px;
+                                        color: $color-accent-1;
+                                        font-weight: 500;
+                                        transform-origin: 0 0;
+                                        cursor: text;
+                                        transition: all .25s ease;
+                                    }
+
+                                    .border, .border-2 {
+                                        height: 1px;
+                                        bottom: 0;
+                                    }
+
+                                    .border-2 {
+                                        width: 100%;
+                                        position: absolute;
+                                        background: rgba(26, 26, 26, 0.5);
+                                    }
+                                }
+                                .standard-btn {
+                                    flex: 1 1 10%;
+
+                                    a {
+                                        text-decoration: none;
+                                        
+                                        &:hover, &:focus {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .input-container {
+                                input {
+                                    margin: 0;
+                                    font-weight: 400;
+                                    color: $color-accent-3;
+                                    box-shadow: none !important;
+                                    border-bottom: 1px solid rgba(26, 26, 26, 0.5);
+
+                                    &:not(:placeholder-shown) + span{
+                                        top: 15px;
+                                        color: $color-accent-3;
+                                        transform: translateY(-26px) scale(.75);
+                                    }
+
+                                    &:focus{
+                                        color: $color-main-1;
+                                        background: none;
+                                        outline: none;
+                            
+                                        + span{
+                                            color: $color-main-1;
+                                            transform: translateY(-26px) scale(.75);
+                            
+                                            + .border{
+                                                transform: scaleX(1);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .label{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0;
+                                    font-size: 16px;
+                                    color: $color-accent-1;
+                                    font-weight: 500;
+                                    transform-origin: 0 0;
+                                    cursor: text;
+                                    transition: all .25s ease;
+                                }
+
+                                .border, .border-2 {
+                                    height: 1px;
+                                    bottom: -8px;
+                                }
+                            }
+                        }
+                    }
+
+                    .wrapper-editor {
+                        padding: 2rem;
+                    }
+                }
+
+                .screenshot {
+                    width: 344px;
+                    margin-top: 3px;
+                    margin-left: 1px;
+        
+                    img {
+                        float:left;
+                        padding:4px;
+                        max-width:334px;
+                        border-width:1px;
+                        border-style:solid;
+                        margin-bottom:10px;
+                        background:#fafafa;
+                        border-color:#ccc #eee #eee #ccc;
+                    }
+                    .no_image {
+                        .remove-button {
+                            bottom: 0px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+#infoProjectContent {
+    .content-group {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 100%;
+
+        input[type='file'] {
+            width: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        .value {
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            position: absolute;
+        }
+    }
+}

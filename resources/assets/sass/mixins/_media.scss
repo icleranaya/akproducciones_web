@@ -1,0 +1,71 @@
+@mixin media-iphone-4 {
+    @media screen and (max-width: 321px){
+        @content;
+    }
+}
+
+// Extra Small Devices
+@mixin mediaXSm {
+    @media screen and (max-width: 390px) {
+        @content;
+    }
+}
+
+// @mixin mediaXSm-Landscape {
+//     @media screen and (max-width: 390px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+
+// Small Devices
+@mixin mediaSm {
+    @media screen and (max-width: 575px){
+        @content;
+    }
+}
+
+// @mixin mediaSm-Landscape {
+//     @media screen and (max-width: 500px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+
+// Medium Devices
+@mixin mediaMd {
+    @media screen and (max-width: 767px){
+        @content;
+    }
+}
+
+// @mixin mediaMd-Landscape {
+//     @media screen and (max-width: 768px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+
+// Large Devices Portrait
+@mixin mediaLg {
+    @media screen and (max-width: 910px) {
+        @content;
+    }
+}
+
+// @mixin mediaLg-Landscape {
+//     @media screen and (min-width: 769px) and (max-width: 1170px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+
+// Extra Large Devices Portrait
+@mixin mediaXL {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+// @mixin mediaXL-Landscape {
+//     @media screen and (min-width: 1171px) and (orientation: landscape) {
+//         @content;
+//     }
+// }
+  

@@ -1,0 +1,38 @@
+svg{
+    g{
+        transition: all 0.3s ease-in-out;
+        fill: $white;
+    }
+}
+
+.svg-xs{
+    width: 0.5rem;
+    height: auto
+}
+
+.svg-small{
+    width: 0.8rem;
+    height: auto
+}
+
+.svg-md{
+    width: 1rem;
+    height: auto
+}
+
+.svg-big{
+    width: 1.5rem;
+    height: auto
+}
+
+.svg-arrow-up{
+    transform: rotate(180deg);
+}
+
+.svg-arrow-left{
+    transform: rotate(90deg);
+}
+
+.svg-arrow-right{
+    transform: rotate(-90deg);
+}

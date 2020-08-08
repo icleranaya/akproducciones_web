@@ -1,0 +1,23 @@
+.services-ind-main{
+    position: absolute;
+    right: 0;
+    margin-bottom: 5rem;
+
+    @include mediaMd{
+        width: 100%;
+        height: calc(100% - 5rem);
+        bottom: 0;
+    }
+
+    .scroll-section{
+        right: 0;
+    }
+
+    .hide-svg{
+        visibility: hidden;
+
+        @include mediaMd{
+            visibility: visible;
+        }
+    }
+}

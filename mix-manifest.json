@@ -1,0 +1,11 @@
+{
+    "/public/js/admin/app.js": "/public/js/admin/app.js",
+    "/public/js/admin/app.js.map": "/public/js/admin/app.js.map",
+    "/public/js/landing/app.js": "/public/js/landing/app.js",
+    "/public/css/landing/app.css": "/public/css/landing/app.css",
+    "/public/css/admin/admin.css": "/public/css/admin/admin.css",
+    "/public/js/landing/app.js.map": "/public/js/landing/app.js.map",
+    "/public/plugins/jquery/jquery.min.js": "/public/plugins/jquery/jquery.min.js",
+    "/public/plugins/svg-injector-2/svg-injector.min.js": "/public/plugins/svg-injector-2/svg-injector.min.js",
+    "/public/plugins/wow/wow.min.js": "/public/plugins/wow/wow.min.js"
+}

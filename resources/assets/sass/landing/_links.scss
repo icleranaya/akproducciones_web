@@ -1,0 +1,94 @@
+// a{
+//     line-height: 10px !important;
+// }
+
+.back-link{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+
+    svg{
+        margin-right: 0.85rem;
+        margin-top: -0.15rem;
+    }
+
+    &:hover{
+        color: $color-accent-2;
+    }
+}
+
+.scroll-link {
+    color: $color-accent-3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+
+    svg{
+        margin-left: 0.85rem;
+        g{
+            fill: $color-accent-3;
+        }
+    }
+
+    &:hover{
+        color: $color-accent-1;
+
+        svg{
+            g{
+                fill: $color-accent-1;
+            }
+        }
+    }
+}
+
+.scroll-up{
+    align-items: flex-end;
+}
+
+.show-link{
+    color: $white;
+    padding: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: $color-main-1;
+
+        &:after{
+            width: 150%;
+            margin-left: -100%;
+        }
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        transition: all 0.15s ease-in-out;
+        background: $white;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        margin-left: 0;
+        left: 50%;
+        bottom: 0;
+        transition: all 0.15s ease-in-out;
+        background: $color-main-1;
+    }
+}

@@ -1,0 +1,93 @@
+.input-container{
+    position: relative;
+    margin: auto;
+    width: 100%;
+
+    &:hover{
+
+        input, select{
+            border-color: #F3F3F3;
+        }
+    }
+    
+    .label{
+        position: absolute;
+        top: 20px;
+        left: 0;
+        font-size: 16px;
+        color: rgba(243, 243, 243,0.5);
+        font-weight: 500;
+        transform-origin: 0 0;
+        cursor: text;
+        transition: all .25s ease;
+    }
+
+    .border{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: $color-main-1;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        z-index: 1;
+        transition: all .3s ease;
+    }
+
+    input, select{
+        position: relative;
+        -webkit-appearance: none;
+        width: 100%;
+        border: 0;
+        font-family: inherit;
+        padding: 12px 0 0;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 700;
+        border-bottom: 2px solid rgba(243, 243, 243,0.5);
+        background: none;
+        border-radius: 0;
+        color: white;
+        z-index: 1;
+        transition: all .3s ease;
+
+        &:not(:placeholder-shown) + span{
+            top: 15px;
+            color: $white;
+            transform: translateY(-26px) scale(.75);
+        }
+
+        &:focus{
+            background: none;
+            outline: none;
+
+            + span{
+                top: 15px;
+                color: $color-main-1;
+                transform: translateY(-26px) scale(.75);
+
+                + .border{
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    .arrow-select{
+        position: absolute;
+        top: 15px;
+        right: 5px;
+        color: white;
+        z-index: 0;
+    }
+
+    select{
+        cursor: pointer;
+
+        option{
+            background: $color-accent-3;
+            color: white;
+        }
+    }
+}

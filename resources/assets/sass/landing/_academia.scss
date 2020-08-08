@@ -1,0 +1,324 @@
+.main-academia{
+    position: absolute;
+    right: 0;
+    
+    @include mediaMd{
+        width: 100%;
+        height: calc(100% - 5rem);
+        bottom: 0;
+    }
+
+    .layout-center {
+        .center-container-row{
+            height: 100%;
+        }
+    }
+    
+    .responsive-data-container {
+        display: none;
+        width: 80%;
+        
+        .title-stroke {
+            position: relative;
+            font-size: 3rem;
+            text-align: center;
+        }
+        
+        .mobile-card-container {
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 10%;
+            
+            .preview-card{
+                height: 25rem;
+                margin-bottom: 5rem;
+                
+                img {
+                    width: 100%;
+                }
+
+                @include mediaSm{
+                    height: 15rem;
+                    margin-bottom: 2rem;
+                }
+
+                @include mediaXSm {
+                    height: 12rem;
+                }
+
+                // @include media-iphone-4 {
+                //     height: 14rem;
+                // }
+
+                .card-image{
+                    width: 100%;
+                }
+
+                .card-overlay{
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+
+                    .card-link-container{
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+
+                        .show-link{
+                            width: 100%;
+                            height: 100%;
+                            font-size: 2rem;
+                            text-align: center;
+
+                            @include mediaMd {
+                                line-height: 3.5rem !important;
+                            }
+
+                            @include mediaSm {
+                                font-size: 1.85rem;
+                                line-height: 2.5rem !important;
+                            }
+
+                            @include mediaXSm {
+                                font-size: 1.7rem;
+                                line-height: 2.3rem !important;
+                            }
+
+                            @include media-iphone-4 {
+                                font-size: 1.6rem;
+                                line-height: 1.8rem !important;
+                            }
+
+                            &:hover{
+                                &:after{
+                                    width: 45%;
+                                    margin-left: -23%;
+                                }
+                            }
+
+                            &:before{
+                                width: 45%;
+                                left: 27%;
+                                bottom: 30%;
+                            }
+
+                            &:after{
+                                left: 50%;
+                                bottom: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            @include mediaMd {
+                display: flex;
+                flex-flow: column nowrap;
+                height: auto;
+                margin-top: 10%;
+                
+                .sm-txt-bold {
+                    font-size: 1.6rem;
+                }
+            }
+    
+            @include mediaSm {
+                .sm-txt-bold {
+                    font-size: 1.4rem;
+                }
+            }
+    
+            @include mediaXSm {
+                .sm-txt-bold {
+                    font-size: 1.2rem;
+                }
+
+            }
+        }
+    }
+
+    .spliter-down-right,.bg-mid-color,.stroke-right{
+        position: fixed;
+    }
+
+    .academy-slider{
+        width: 80%;
+        height: 55%;
+    }
+
+    .swiper-custom-btn-left, .swiper-custom-btn-right{
+        position: absolute;
+        top: 45%;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            svg{
+                g{
+                    fill: $color-accent-1;
+                }
+            }
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .swiper-custom-btn-left{
+        left: 5%;
+    }
+
+
+    .swiper-custom-btn-right{
+        right: 5%;
+    }
+
+    .stroke-right{
+        margin-top: 5vh;
+        right: -68.5%;
+    }
+
+    .spliter-down-right{
+        margin-bottom: 2rem;
+    }
+
+    .scroll-section{
+        bottom: 16.5%;
+    }    
+
+    @include mediaXL {
+        
+        .profile-description {
+            margin-bottom: 9rem;
+        }
+
+        .profile-description p {
+            line-height: 22px;
+        }
+
+        .info-container {
+
+            .profile-photo {
+                width: 25rem;
+                height: 20rem;
+            }
+        }
+
+        .academy-slider{
+            height: 45%;
+        }
+
+    }
+
+    @include mediaMd {
+        width: 100%;
+        z-index: 0;
+
+        .center-container {
+            height: calc(100%);
+        }
+
+        .stroke-right, .swiper-custom-btn-left, .swiper-custom-btn-right {
+            display: none;
+        }
+
+        .bg-mid-color{
+            position: absolute;
+            height: 140vh;
+        }
+
+        .responsive-data-container {
+            display: block;
+        }
+
+        .spliter-down-right, .stroke-right, .scroll-section, .swiper-container {
+            display: none;
+        }
+
+        .info-container {
+            margin: auto;
+            flex-flow: column;
+
+            .profile-photo{
+                width: 73%;
+                height: 22rem;
+                margin-bottom: .5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .profile-description {
+                width: 80%;
+                display: flex;
+                flex-flow: column;
+                margin: auto;
+                text-align: center;
+
+                h2 {
+                    font-size: 2rem;
+                    margin-top: 3rem;
+                }
+            }
+
+        }
+    }
+    
+    @include mediaSm {
+
+        .info-container {
+
+            .profile-photo {
+                height: 15rem;
+
+            }
+        }
+    }
+
+    @include mediaXSm {
+
+        .scroll-sec:first-child{
+            margin-bottom: 4rem;
+            padding-top: 4rem;
+        }
+
+        .info-container {
+
+            .profile-photo {
+                height: 11rem;
+            }
+
+            .profile-description {
+                width: 85%;
+
+                p {
+                    font-size: .75rem;
+                }
+            }
+        }
+
+        .bg-mid-color{
+            height: 150vh;
+        }
+    }
+   
+    .scroll-desktop-version{
+        @include mediaMd {
+            display: none;
+        }
+    }
+
+    .scroll-mobile-version{
+        display: none;
+
+        @include mediaMd {
+            display: inline-block;
+        }
+    }
+}

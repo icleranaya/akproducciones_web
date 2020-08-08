@@ -1,0 +1,247 @@
+#novedades {
+    padding-top: 3rem;
+
+    .link-swiper {
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: 2%;
+    
+        .link{
+            cursor: pointer;
+            color: white;
+            position: relative;
+            padding: 2rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-end;
+    
+            &:hover{
+                &:after{
+                    width: 100%;
+                }
+            }
+    
+            h2, p{
+                text-align: right;
+                margin: 0;
+            }
+    
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                background-color: white;
+                width: 0;
+                height: 3px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    
+        .active{
+            &:after{
+                width: 100%;
+            }
+        }
+    }
+    
+    .slider-header-container {
+        position: absolute;
+        width: 100%;
+        top: 12%;
+        right: -48%;
+        font-size: 6rem;
+        z-index: 0;
+    
+        ul{
+            position: relative;
+            .slide-header{
+                white-space: nowrap;
+                position: absolute;
+                opacity: 0;
+                color: transparent;
+                -webkit-text-stroke: 2px white;
+                transition: all 0.3s ease-in-out;
+                font-weight: bold;
+    
+                span{
+                    color: white;
+                    -webkit-text-stroke: 0px;
+                    font-weight: lighter;
+                    font-size: 5.5rem;
+                }
+            }
+        
+            .tittle-active{
+                opacity: 0.3;
+            }
+        }
+    }
+    
+    .dynamic-slider{
+        height: 75vh;
+        z-index: 0 !important;
+        .swiper-wrapper{
+            .swiper-slide {
+                position: relative;
+                height: 100%;
+    
+                .quote-container {
+                    color: white;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 10%;
+                    width: 50%;
+                    line-height: 25px;
+    
+                    .quote-tittle{
+                        margin: 0;
+                    }
+    
+                    p{
+                        margin-bottom: 2rem;
+                    }
+    
+                    .btn-wrapper{
+                        color: white;
+                        text-decoration: none;
+                        background: $black;
+                        border: 1px solid $principal-grey;
+                        padding: 0.5rem;
+                        width: 25%;
+                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
+                        transition: all 0.3s ease-in-out;
+    
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            background: $principal-orange;
+                            width: 70%;
+                            height: 75%;
+                            transform: rotate(50deg);
+                        }
+    
+    
+                        &:hover{
+                            background: $principal-orange;
+    
+                            .more-btn{
+                                span{
+                                    color: white;
+                                }
+                            }
+                        }
+    
+                        .more-btn {
+                            color: white;
+                            text-decoration: none;
+                            span{
+                                transition: all 0.3s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .swiper-pagination-container{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 15%;
+            height: 100%;
+            background: $principal-orange;
+            z-index: 1;
+            .swiper-pagination{
+                transform: rotate(90deg);
+                position: absolute;
+                top: 50%;
+                display: flex;
+                align-items: center;
+    
+                .swiper-pagination-bullet{
+                    margin: 1rem;
+                    background: white;
+                    opacity: 1;
+                    transition: all 0.3s ease-in-out;
+    
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: white;
+                        position: absolute;
+                        transform: rotate(-90deg) translate(20px, -1px);
+                        transform-origin: top left;
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+    
+                .swiper-pagination-bullet-active{
+                    background: transparent;
+                    padding: .4rem;
+                    border: 2px solid white;
+    
+                    &:after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    
+        .swiper-btn-container {
+            position: absolute;
+            right: 15%;
+            bottom: 0;
+            width: 15rem;
+            height: 4rem;
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0;
+            z-index: 1;
+    
+            .swiper-custom-btn-prev, .swiper-custom-btn-next{
+                width: 50%;
+                height: 100%;
+                outline: none;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                background: white;
+                transition: all 0.3s ease-in-out;
+    
+                #arrow_left {
+                    g {
+                        fill: $black;
+                    }
+                }
+    
+                #arrow_right {
+                    g {
+                        fill: $black;
+                    }
+                }
+    
+                &:hover{
+                    background: $black;
+                    #arrow_left {
+                        g {
+                            fill: white;
+                        }
+                    }
+        
+                    #arrow_right {
+                        g {
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

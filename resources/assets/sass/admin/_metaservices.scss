@@ -1,0 +1,147 @@
+#lb_services-service_information {
+    .inside {
+        display: flex;
+        flex-flow: row nowrap;
+
+        #infoServices {
+            display: flex;
+            flex-flow: column nowrap;
+            border-bottom: none;
+            .nav-tab {
+                margin-left: 0;
+                border-color: #e9ecef #e9ecef #dee2e6;
+
+                &.nav-tab-active {
+                    background: #ffffff;
+                    border-color: #e9ecef #e9ecef #dee2e6;
+                }
+
+            }
+        }
+
+        #infoServicesContent {
+            padding: 1rem;
+            flex: 1 1 100%;
+            background: #f8f9f9;
+
+            .group {
+                .inputs-for-table {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    justify-content: flex-start;
+
+                    .inputs-group {
+                        width: 100%;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        
+                        .input-container{
+                            margin: auto;
+                            flex: 1 1 100%;
+                            position: relative;
+                            margin-left: .5rem;
+                            margin-right: .5rem;
+                        
+                            &:hover{
+                        
+                                input, select{
+                                    border-color: #F3F3F3;
+                                }
+                            }
+                            
+                            .label{
+                                left: 0;
+                                top: 20px;
+                                cursor: text;
+                                color: #a2a2a2;
+                                font-size: 16px;
+                                font-weight: 500;
+                                font-weight: 700;
+                                line-height: 18px;
+                                position: absolute;
+                                font-size: 0.85rem;
+                                transform-origin: 0 0;
+                                transition: all .25s ease;
+                            }
+                        
+                            .border{
+                                left: 0;
+                                bottom: 0;
+                                z-index: 1;
+                                height: 1px;
+                                width: 100%;
+                                position: absolute;
+                                background: black;
+                                transform: scaleX(0);
+                                transform-origin: 0 0;
+                                transition: all .3s ease;
+                            }
+                        
+                            input {
+                                border: 0;
+                                z-index: 1;
+                                width: 100%;
+                                height: 45px;
+                                color: #332f2f;
+                                font-size: 16px;
+                                font-weight: 700;
+                                background: none;
+                                border-radius: 0;
+                                box-shadow: none;
+                                padding: 12px 0 0;
+                                position: relative;
+                                font-family: inherit;
+                                -webkit-appearance: none;
+                                transition: all .3s ease;
+                                border-bottom: 1px solid #a2a2a2;
+                        
+                                &:not(:placeholder-shown) + span{
+                                    top: 15px;
+                                    color: #332f2f;
+                                    transform: translateY(-26px) scale(.75);
+                                }
+                        
+                                &:focus{
+                                    background: transparent;
+                                    outline: none;
+                                    box-shadow: none;
+                        
+                                    + span{
+                                        top: 15px;
+                                        color: black;
+                                        transform: translateY(-26px) scale(.75);
+                        
+                                        + .border{
+                                            transform: scaleX(1);
+                                        }
+                                    }
+                                }
+                            }
+                    
+                        }
+                    }
+
+                    .btn-wrap {
+                        width: 20%;
+                        margin-top: 1rem;
+                        text-align: center;
+
+                        a {
+                            border-radius: 2px;
+                            text-decoration: none;
+
+                            &:hover, &:focus {
+                                color: $white;
+                                outline: none;
+                                box-shadow: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

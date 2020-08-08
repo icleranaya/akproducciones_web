@@ -1,0 +1,11 @@
+@mixin btn-style($width, $padd, $color, $colorHov){
+	width: $width;
+	padding: $padd;
+	background-color: $color;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	
+	&:hover{
+		background-color: $colorHov;
+	}
+}

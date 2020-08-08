@@ -1,0 +1,29 @@
+.main-charge{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    z-index: 100000;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background: $color-main-1;
+    transition: all 0.3s 1s ease-out;
+
+    .load-img {
+        height: auto;
+        width: 5.5rem;
+        transition: all 0.4s 1s ease-out;
+        animation: rotate-logo 2s cubic-bezier(0.54, 0.01, 0, 1.01) infinite;
+    }
+}
+
+@keyframes rotate-logo{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}

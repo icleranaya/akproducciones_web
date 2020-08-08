@@ -1,0 +1,26 @@
+
+.stroke-right {
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 12vh;
+    top: 0;
+    right: -60%; 
+
+    @include mediaMd{
+        display: none;
+    }
+}
+
+.stroke-right-up {
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 5vh;
+    top: 0;
+    right: -60%; 
+
+    @include mediaMd{
+        display: none;
+    }
+}

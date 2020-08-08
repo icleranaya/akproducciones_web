@@ -1,0 +1,461 @@
+.main-producciones{
+    position: absolute;
+    right: 0;
+
+    @include mediaMd{
+        width: 100%;
+        height: calc(100% - 5rem);
+        bottom: 0;
+    }
+
+    .spliter-down-right {
+        position: relative;
+        margin-top: 5%;
+        margin-bottom: -3%;
+        z-index: 1;
+
+        @include mediaXL{
+            display: none;
+        }
+    }
+
+    .stroke-right{
+        @include mediaLg{
+            display: none;
+        }
+    }
+
+    .audio-player{
+        width: 100%;
+        height: fit-content;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+
+        .player-container{
+            width: 100%;
+            height: 50vh;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 65%);
+            position: relative;
+            overflow: hidden;
+
+            @include mediaXL {
+                height: 45vh;
+            }
+
+            @include mediaLg{
+                height: auto;
+            }
+
+            .player-image{
+                width: 100%;
+                height: auto;
+                position: absolute;
+                z-index: -1;
+
+                @include mediaLg{
+                    height: 100%;
+                }
+            }
+
+            .player-controls{
+                position: absolute;
+                left: 5%;
+                bottom: 15%;
+
+                @include mediaLg{
+                    position: relative;
+                    left: unset;
+                    bottom: unset;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3rem 0;
+                }
+
+                @mixin hoverControls {
+                    margin-bottom: 5px;
+                }
+
+                .top-player{
+                    position: relative;
+                    display: flex;
+
+                    @include mediaLg{
+                        flex-flow: column-reverse;
+                    }
+
+                    .play{
+                        width: 30px;
+                        height: 30px;
+                        background: url(./../../../public/images/svg/play.svg) no-repeat center center;
+                        background-size: contain;
+                        cursor: pointer;
+                        position: absolute;
+                        left: 0;
+                        bottom: 10%;
+                        transition: all 0.15s ease-in-out;
+
+                        @include mediaLg{
+                            width: 35px;
+                            height: 35px;
+                            position: relative;
+                            bottom: unset;
+                            left: 45%;
+                        }
+
+                        &:hover{
+                            @include hoverControls;
+
+                            @include mediaLg{
+                                margin-bottom: unset;
+                            }
+                        }
+                    }
+
+                    .pause{
+                        width: 30px;
+                        height: 30px;
+                        background: url(./../../../public/images/svg/pause.svg) no-repeat center center;
+                        background-size: contain;
+                        cursor: pointer;
+                        position: absolute;
+                        left: 0;
+                        bottom: 10%;
+                        transition: all 0.15s ease-in-out;
+
+                        @include mediaLg{
+                            width: 35px;
+                            height: 35px;
+                            bottom: unset;
+                            left: 45%;
+                        }
+
+                        &:hover{
+                            @include hoverControls;
+
+                            @include mediaLg{
+                                margin-bottom: unset;
+                            }    
+                        }
+                    }
+
+                    .hidden{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    .visible{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    .music-title{
+                        position: relative;
+                        left: 50px;
+
+                        @include mediaLg{
+                            left: unset;
+                        }
+
+                        .artist{
+                            color: white;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+
+                            @include mediaLg{
+                                display: none;
+                            }
+                        }
+                        
+                        .title{
+                            color: white;
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            line-height: 3rem;
+
+                            @include mediaLg{
+                                font-size: 1.5rem;
+                                text-align: center;
+                                margin-bottom: 1rem;                            
+                            }
+                        }
+                    }
+                }
+
+                .bottom-player{
+                    height: 2rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 2rem;
+                    position: relative;
+
+                    @include mediaLg{
+                        width: 100%;
+                        flex-flow: row-reverse;
+                        justify-content: center;
+                    }
+
+                    .prev{
+                        width: 25px;
+                        height: 25px;
+                        background: url(./../../../public/images/svg/back.svg) no-repeat center center;
+                        background-size: contain;
+                        cursor: pointer;
+                        transition: all 0.15s ease-in-out;
+
+                        @include mediaLg{
+                            width: 35px;
+                            height: 35px;
+                            position: absolute;
+                            left: 6rem;
+                            top: -4rem;
+                        }
+
+                        @include media-iphone-4 {
+                            left:3rem;
+                        }
+
+                        &:hover{
+                            @include hoverControls;
+
+                            @include mediaLg{
+                                margin-bottom: unset;
+                            }
+                        }
+                    }
+
+                    .next{
+                        width: 25px;
+                        height: 25px;
+                        background: url(./../../../public/images/svg/next.svg) no-repeat center center;
+                        background-size: contain;
+                        cursor: pointer;
+                        transition: all 0.15s ease-in-out;
+
+                        @include mediaLg{
+                            width: 35px;
+                            height: 35px;
+                            position: absolute;
+                            right: 6rem;
+                            top: -4rem;
+                        }
+
+                        @include media-iphone-4 {
+                            right:3rem;
+                        }
+
+                        &:hover{
+                            @include hoverControls;
+
+                            @include mediaLg{
+                                margin-bottom: unset;
+                            }
+                        }
+                    }
+
+                    .tracker{
+                        position: relative;
+                        width: 25rem;
+                        height: 0.2rem;
+                        background: $white;
+                        cursor: pointer;
+
+                        .progressBar{
+                            position: absolute;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            background: $color-accent-1;
+                        }
+
+                        @include mediaLg {
+                            position: absolute;
+                            width: 34rem;
+                            height: 0.1rem;
+                            margin-right: 0;
+                            margin-left: 3rem;
+                        }
+
+                        @include mediaMd {
+                            width: 17rem;
+                        }
+
+                        @include mediaSm {
+                            width: 15rem;
+                        }
+
+                        @include media-iphone-4 {
+                            width: 12rem;
+                        }
+                    }
+
+                    .timer{
+                        color: $white;
+                        display: flex;
+
+                        .currentTime{
+                            margin-right: 5px;
+                        }
+
+                        .fullTime{
+                            margin-left: 5px;
+                        }
+
+                        @include mediaLg {
+                            position: absolute;
+                            left: 1rem;
+                            margin: 0;
+                        }
+                    }
+
+                    .volumeContainer{
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+
+                        @include mediaXL{
+                            right: -7%;
+                        }
+
+                        @include mediaLg{
+                            visibility: hidden;
+                            display: none;
+                        }
+
+                        &:hover{
+                            .volumeTracker{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+
+                        .volume{
+                            width: 30px;
+                            height: 30px;
+                            background: url(./../../../public/images/svg/volume_high.svg) no-repeat center center;
+                            background-size: contain;
+                            cursor: pointer;
+                            transition: all 0.15s ease-in-out;
+                            margin-right: 10%;
+                            position: relative;
+
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                background: #ffff;
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                transform: rotate(130deg);
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: all 0.15s ease-in-out;
+                            }
+                        }
+
+                        .muted{
+                            &::before{
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                        
+                        .volumeTracker{
+                            position: relative;
+                            width: 7rem;
+                            height: 0.2rem;
+                            background: $white;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.15s ease-in-out;
+
+                            .volumeCurrent{
+                                position: absolute;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                background: $color-main-1;
+                            }
+                        }
+                    }
+
+                    &>div{
+                        margin-right: 3rem;
+
+                        @include mediaXL{
+                            margin-right: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .playlist-container{
+        width: 100%;
+        height: auto;
+        background: $color-main-1;
+        padding: 5%;
+        position: relative;
+
+        .playlist{
+            width: 75%;
+
+            @include mediaXL{
+                width: 100%;
+            }
+
+            li{
+                border-top: 0.5px solid rgba($white, 0.5);
+                border-bottom: 0.5px solid rgba($white, 0.5);
+                padding: 1rem 0 0.5rem;
+
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 1.5px; 
+                color: $white;
+                transition: all 0.1s cubic-bezier(0.82, 0.03, 0.26, 0.94);
+                cursor: pointer;
+                // text-transform: capitalize;
+
+                @include mediaLg{
+                    padding: 1.5rem 0;
+                }
+
+                &:hover{
+                    font-weight: 600;
+                }
+
+                &:first-child{
+                    border-top: 2px solid rgba($white, 0.3);
+                }
+
+                &:last-child{
+                    border-bottom: 2px solid rgba($white, 0.3);
+                }
+
+                .number-id{
+                    margin-right: 0.5rem;
+                }
+            }
+
+            .active{
+                font-weight: 600;
+            }
+        }
+    }
+}

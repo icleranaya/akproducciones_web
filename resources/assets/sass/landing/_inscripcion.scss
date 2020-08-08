@@ -1,0 +1,159 @@
+.main-signup{
+    .logo-container{
+        z-index: 99999;
+
+        @include mediaMd{
+            width: 20%;
+            height: 8%;
+            left: 40%;
+            z-index: 9999;
+        }
+
+        @include mediaSm{
+            width: 25%;
+        }
+    }
+
+    .responsive-submit-btn{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        display: none;
+
+        @include mediaMd{
+            display: inline-block;
+        }
+
+        .standard-btn{
+            width: 100%;
+            padding: 1.5rem;
+        }
+    }
+
+    .back-btn{
+        width: 100%;
+        margin-bottom: 3rem;
+        display: none;
+
+        @include mediaMd{
+            display: inline-block;
+        }
+    }
+}
+
+#inscription-form{
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    padding: 0;
+
+    @include mediaMd{
+        height: auto;
+    }
+
+    .logo-container{
+        width: 20%;
+        height: 8rem;
+        left: 40%;
+        position: relative;
+        display: none;
+
+        img{
+            width: 60%;
+            margin-bottom: 1rem;
+        }
+
+        @include mediaMd{
+            display: flex;
+        }
+
+        @include mediaSm{
+            width: 25%;
+        }
+    }
+
+    .container-info{
+        position: relative;
+        width: 60%;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+
+        @include mediaMd{
+            width: 80%;
+            align-items: center;
+            margin-top: 15%;
+        }
+
+        .form-header{
+            margin-bottom: 3rem;
+        }
+
+        .form-container{
+            width: 100%;
+
+            .form-wrapper {
+                display: flex;
+                flex-flow: row;
+
+                @include mediaMd{
+                    flex-flow: column;
+                }
+
+                .form-column {
+                    display: flex;
+                    flex-flow: column;
+                    width: 40%;
+                    height: 100%;
+                    margin-right: 10%;
+
+                    @include mediaMd{
+                        width: 100%;
+                        margin-right: 0;
+                    }
+
+                    .input-container{
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+        }
+
+        .submit-container{
+            position: absolute;
+            width: 10rem;
+            right: 10%;
+            bottom: -10%;
+
+            @include mediaMd{
+                width: 100%;
+                right: unset;
+                bottom: 0px;
+                position: relative;
+                margin-bottom: 5rem;
+            }
+    
+            .standard-btn{
+                width: 100%;
+            }
+        }
+    }
+
+    .fancybox-button{
+        right: 5%;
+        top: 5%;
+        color: rgba(255, 255, 255,1);
+        width: 4rem;
+        height: 4rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            color: $color-main-1;
+        }
+    }
+}
+
+.fancybox-slide--html {
+    padding: 0;
+}

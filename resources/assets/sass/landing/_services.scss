@@ -1,0 +1,147 @@
+.main-services{
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+    @include mediaMd{
+        width: 100%;
+        height: calc(100% - 5rem);
+        bottom: 0;
+    }
+
+    .services-slider{
+        width: 80%;
+        height: 55%;
+
+        @include mediaMd{
+            display: none;
+        }   
+    }
+
+    .responsive-data-container{
+        display: none;
+        width: 80%;
+        height: 100%;
+        margin-top: 15%;
+
+        @include mediaMd{
+            display: block;
+        }
+
+        @include mediaSm{
+            margin-top: 50%;
+        }
+
+        .title-stroke {
+            position: relative;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .mobile-card-container {
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 10%;
+
+            .preview-card{
+                height: 25rem;
+                margin-bottom: 5rem;
+
+                @include mediaSm{
+                    height: 13rem;
+                    margin-bottom: 4rem;
+                }
+
+                @include media-iphone-4{
+                    height: 10rem;
+                    margin-bottom: 3rem;
+                }
+
+                .card-image{
+                    width: 100%;
+                }
+
+                .card-overlay{
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+
+                    .card-link-container{
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+
+                        .show-link{
+                            width: 100%;
+                            height: 100%;
+                            font-size: 2rem;
+                            text-align: center;
+                            line-height: 33px!important;
+
+                            &:hover{
+                                &:after{
+                                    width: 45%;
+                                    margin-left: -23%;
+                                }
+                            }
+
+                            &:before{
+                                width: 45%;
+                                left: 27%;
+                                bottom: 30%;
+                            }
+
+                            &:after{
+                                left: 50%;
+                                bottom: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-custom-btn-left, .swiper-custom-btn-right{
+        position: absolute;
+        top: 45%;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @include mediaMd{
+            display: none;
+        }
+
+        &:hover{
+            svg{
+                g{
+                    fill: $color-accent-1;
+                }
+            }
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .swiper-custom-btn-left{
+        left: 5%;
+    }
+
+
+    .swiper-custom-btn-right{
+        right: 5%;
+    }
+
+    .scroll-section{
+        display: none;
+
+        @include mediaMd{
+            display: block;
+        }
+    }
+}

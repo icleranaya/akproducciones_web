@@ -1,0 +1,78 @@
+.accordion {
+    width: 100%;
+    display: none;
+
+    @include mediaMd {
+        display: block;
+    }
+
+    .accordion-bg-1 {
+        color: $white;
+        background-color: $color-main-2;
+    }
+
+    .accordion-bg-2 {
+        color: $white;
+        background-color: $color-main-1;
+    }
+
+    .accordion-header {
+        width: auto;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 1.2rem;
+        position: relative;
+        border: 1px solid $color-accent-1;
+        transition: all 0.3s ease-in-out;
+
+        .accordion-link-header {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: .6rem;
+            font-size: 1rem;
+            font-weight: 700;
+            position: absolute;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                flex: 1 1 90%;
+            }
+
+            svg {
+                flex: 1 1 10%;
+                transform: rotate(90deg);
+                transition: .3s ease-in-out;
+            }
+
+            &.accordion-active {
+                svg {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    .content-item {
+        padding: .8rem;
+        background: $white;
+        border: 1px solid $color-accent-1;
+
+        &.sub-accordion-wrapper {
+            >.sub-accordion-content {
+                >.sub-accordion-item {
+                    padding: .5rem;
+
+                    &:before {
+                        content: "-";
+                    }
+                }
+            }
+        }
+    }
+}

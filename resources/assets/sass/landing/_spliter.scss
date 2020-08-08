@@ -1,0 +1,52 @@
+.spliter-down-left, .spliter-down-right, .spliter-mid-left, .spliter-mid-right, .spliter-up-right, .spliter-up-left {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    // background-image: url(public/img/backgrounds/spliter.png);
+
+    @include mediaMd{
+        display: none;
+    }
+}
+
+.spliter-up-right {
+    margin-left: auto;
+    margin-top: 15vh;
+    top: 0;
+    right: -65%;  
+}
+
+.spliter-up-left {
+    margin-left: auto;
+    margin-top: 15vh;
+    top: 0;
+    left: -30%;  
+}
+
+.spliter-mid-left {
+    margin: auto;
+    top: 85vh;
+    bottom: 0;
+    left: -30%;
+}
+
+.spliter-mid-right {
+    margin: auto;
+    top: 80vh;
+    bottom: 0;
+    right: -65%;
+}
+
+.spliter-down-right {
+    margin-left: auto;
+    margin-bottom: 10vh;
+    bottom: 0;
+    right: -65%;
+}
+
+.spliter-down-left {
+    margin-left: auto;
+    margin-bottom: 10vh;
+    bottom: 0;
+    left: -30%;
+}
